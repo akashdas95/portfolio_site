@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Akash Das | portfolio site</title>
+</head>
+
+<body x-data="{openMenu:false}" :class="openMenu?'overflow-hidden':'overflow-visible'">
+    <div class=" mx-auto p-3 h-fit ">
+        <a name="home"></a>
+
+        <!-- heading as navbar -->
+
+        <div class="flex justify-between mx-auto ">
+            <button class="md:hidden p-3 rounded bg-purple-500 z-2" @click="openMenu = !openMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <div
+                class="hidden md:flex gap-2 xl:gap-9 lg:gap-6 md:gap-4 md:px-3 place-items-center mx-auto bg-slate-300 md:text-xl text-md shadow-xl shadow-slate-400 md:rounded-full rounded lg:px-5 hover:px-6 transition-all duration-400 hover:shadow-2xl hover:shadow-slate-400">
+                <a href="#home" class="hover:translate-y-1 transition ease-in-out duration-400n text-green-500 hover:text-black">Home</a>
+                <a href="#about-me"
+                    class="hover:translate-y-1 transition ease-in-out duration-400 text-purple-700 hover:text-teal-500">About</a>
+                <a href="#portfolio"
+                    class="hover:translate-y-1 transition ease-in-out duration-400 text-purple-700 hover:text-teal-500">portfolio</a>
+                <a href="#contact"
+                    class="hover:translate-y-1 transition ease-in-out duration-400 text-purple-700 hover:text-teal-500">Contact</a>
+            </div>
+            <a href="#home"
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500 text-2xl md:text-5xl p-1 hover:scale-90 transition-all duration-400  ">AK.Co</a>
+        </div>
+
+        <!--popup nav-->
+
+        <nav class="fixed md:hidden top-0 left-0 right-0 bottom-0 backdrop-blur-lg z-10" :hidden="!openMenu">
+            <ul
+                class="flex flex-col absolute top-0 right-0 bottom-0 w-10/12 bg-purple-500 shadow-xl p-5 z-10 text-white ">
+                <li
+                    class="border-b border-inherit py-5 p-5 text-center hover:text-black hover:bg-green-100 transition ease-in-out duration-600">
+                    <a href="#home" class="block text-2xl" @click="openMenu = !openMenu">Home</a>
+                </li>
+                <li
+                    class="border-b border-inherit py-5 p-5 text-center hover:text-black hover:bg-green-100 transition ease-in-out duration-600">
+                    <a href="#about-me" class="block text-2xl" @click="openMenu = !openMenu">About Me</a>
+                </li>
+                <li
+                    class="border-b border-inherit py-5 p-5 text-center hover:text-black hover:bg-green-100 transition ease-in-out duration-600">
+                    <a href="#portfolio" class="block text-2xl " @click="openMenu = !openMenu">Portfolio</a>
+                </li>
+                <li
+                    class="border-b border-inherit py-5 p-5 text-center hover:text-black hover:bg-green-100 transition ease-in-out duration-600">
+                    <a href="#contact" class="block text-2xl" @click="openMenu = !openMenu">Contact Me</a>
+                </li>
+            </ul>
+
+            <button class="absolute top-0 left-0 right-0 bottom-0 p-5 text-white" @click="openMenu = !openMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="absolute w-6 h-6 m-5 top-1 left-1 bg-purple-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- hero section -->
+
+        <div
+            class="grid grid-cols-1 my-3 mb-12 md:my-12 lg:my-16 lg:mb-36 h-fit p-1 md:p-9 place-items-center lg:grid-cols-2 bg-slate-300 shadow-slate-400 shadow-2xl rounded-2xl">
+            <div class="flex flex-col place-items-center py-9 md:py-16 ">
+                <h1
+                    class="text-3xl text-center lg:text-left md:text-4xl lg:text-5xl xl:text-6xl text-purple-800 font-bold">
+                    Hello.👋 I am Akash Das</h1>
+                <p class="text-lg text-center lg:text-center md:text-2xl lg:text-3xl text-purple-600 py-0.5 md:py-3">I
+                    am an <span class="text-black"> aspiring Software Development
+                        Engineer in Testing (SDET)</span> and <span class="text-black">learner</span>.</p>
+                <button
+                    class="text-white w-fit mx-auto  text-lg lg:mx-0 md:text-2xl shadow-xl p-1 md:p-2 lg:p-4 bg-purple-600 shadow-purple-400 rounded hover:scale-90 transition all duration-400"><a
+                        href="#about-me">more about me</a></button>
+            </div>
+            <img src="./src/hero.png" alt="hero" class="py-2 box-content w-96 md:w-full aspect-auto">
+        </div>
+
+        <!-- about section -->
+        <a name="about-me"></a>
+        <div class=" flex flex-col place-items-center h-fit shadow-2xl shadow-slate-400 bg-slate-300 rounded-xl py-12">
+            <h1 class="text-2xl md:text-4xl lg:text-5xl text-purple-800 place-item-center font-bold pt-3 md:mb-2">About
+                Me</h1>
+            <div
+                class="flex flex-col w-10/12 md:1/2 lg:w-2/3 place-items-center text-left md:pb-5 pt-2 md:pt-9 px-2 md:px-16 lg:px-24 lg:py-12 bg-slate-300 text-purple-900 text-sm md:text-xl lg:text-2xl ">
+                <p class="md:pb-9 leading-8 ">&nbsp &nbsp &nbsp &nbsp &nbsp I am an aspiring Software Development
+                    Engineer in Testing (SDET) with a passion for quality assurance and a strong desire to learn and
+                    grow in the field of software testing and automation. Currently, I
+                    am focused on building my skills in both software development and testing methodologies to
+                    contribute effectively to high-quality software delivery.</br></br>
+
+                    As I embark on my SDET journey, I am actively exploring automation tools such as Selenium, JMeter,
+                    JUnit, and TestNG, alongside programming languages like Java, javascript, C/C++. I am committed to
+                    understanding the
+                    full software development lifecycle and how testing plays a crucial role in delivering reliable
+                    applications.</br></br>
+
+                    I am eager to absorb best practices in testing, test-driven development (TDD), and behavior-driven
+                    development (BDD).</br></br>
+
+                    I am excited about the challenges in the SDET field and motivated to find innovative solutions that
+                    enhance quality and performance.</br></br>
+
+                    Let’s connect and share insights as I navigate this exciting journey in software testing and quality
+                    assurance! So Keep me in your prayers and knock me if need any help or just to have some chat.
+                </p>
+                <button
+                    class="flex text-white text-lg md:text-2xl shadow-lg shadow-purple-500 p-1 md:p-2 mt-3 w-fit bg-purple-700 rounded hover:scale-90 transition ease-in-out duration-400 "><svg
+                        class="fill-current w-4 h-4 m-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                    </svg><a href="./src/CV of Akash das.pdf" download><span>download cv</a></span></a>
+                </button>
+            </div>
+
+            <!-- usedTec -->
+
+            <div class="p-6 pb-8 w-full flex flex-col place-items-center">
+                <h1 class="text-purple-800 text-2xl md:text-3xl lg:text-5xl font-bold mb-8 ">Techstack That I Use</h1>
+                <div
+                    class="p-2 md:p-4 w-full grid gap-3 mx-auto grid-cols-4 md:grid-cols-6 lg:grid-cols-12 bg-purple-800 rounded-lg">
+                    <img class="w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg"
+                        src='./src/playwright.jpg' alt='html' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/selenium.png' alt='css' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/mocha.png' alt='js' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/TestNG.jpg' alt='react' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/junit.png' alt='typescript' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/jmeter.png' alt='sass' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/java.png' alt='tailwindcss' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/javascript.png' alt='bootstarp' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/postman.png' alt='node' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/node.png' alt='express' />
+                    <img class='w-16 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/mysql.png' alt='typescript' />
+                    <img class='w-12 md:w-auto lg:w-auto justify-center hover:scale-90 hover:cursor-pointer transition-all rounded-lg'
+                        src='./src/red hat.png' alt='mongodb' />
+                </div>
+            </div>
+        </div>
+
+
+        <!--personal project -->
+        <a name="portfolio"></a>
+        <div
+            class="w-full mt-36 p-10 flex flex-col place-content-center mx-auto bg-slate-300 shadow-2xl shadow-slate-400 rounded-xl">
+            <h1 class="text-center text-3xl md:text-5xl lg:text-6xl text-purple-800 font-bold p-3 md:p-5 m-3 md:m-5 ">
+                Personal projects</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full mx-auto font-sans">
+                <div
+                    class="flex flex-col w-full p-5 bg-slate-100 rounded-md hover:cursor-pointer hover:scale-95 transition-all hover:shadow-purple-600 shadow-2xl">
+                    <div class="w-11/12 mx-auto pt-3">
+                        <img src="./src/farming.png" alt="" class="w-full ">
+                    </div>
+                    <h1 class="pt-3 pl-3 text-purple-700 text-lg font-bold">Lorem ipsum dolor sit</h1>
+                    <p class="pl-3 text-purple-500 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ad, voluptate</p>
+                </div>
+                <div
+                    class="flex flex-col w-full p-5 bg-slate-100 rounded-md hover:cursor-pointer hover:scale-95 transition-all hover:shadow-purple-600 shadow-2xl">
+                    <div class="w-11/12 mx-auto pt-3">
+                        <img src="./src/farming.png" alt="" class="w-full ">
+                    </div>
+                    <h1 class="pt-3 pl-3 text-purple-700 text-lg font-bold">Lorem ipsum dolor sit</h1>
+                    <p class="pl-3 text-purple-500 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ad, voluptate</p>
+                </div>
+                <div
+                    class="flex flex-col w-full p-5 bg-slate-100 rounded-md hover:cursor-pointer hover:scale-95 transition-all hover:shadow-purple-600 shadow-2xl">
+                    <div class="w-11/12 mx-auto pt-3">
+                        <img src="./src/farming.png" alt="" class="w-full ">
+                    </div>
+                    <h1 class="pt-3 pl-3 text-purple-700 text-lg font-bold">Lorem ipsum dolor sit</h1>
+                    <p class="pl-3 text-purple-500 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ad, voluptate</p>
+                </div>
+            </div>
+        </div>
+
+        <!--social contact-->
+
+        <div class="relative">
+            <ul>
+                <li
+                    class="rounded-full w-6 md:w-10 fixed bottom-60 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
+                    <a href="https://www.facebook.com/profile.php?id=100028346620432" target='_blank'><img
+                            src="./src/facebook.png" alt="facebook" /></a>
+                </li>
+                <li
+                    class="rounded-full w-6 md:w-10 fixed bottom-40 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
+                    <a href="https://github.com/akashdas95" target='_blank'><img src="./src/github.png"
+                            alt="github" /></a>
+                </li>
+                <li
+                    class="rounded-full w-6 md:w-10 fixed bottom-20 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
+                    <a href="https://www.linkedin.com/in/akash-das-a17893205/" target='_blank'><img
+                            src="./src/linkedin.png" alt="linkedin" /></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--contact me-->
+
+
+        <div
+            class="bg-slate-300 m-1 mt-6 md:mt-12 lg:mt-36 rounded-xl p-2 md:p-9 w-full flex flex-col place-items-center shadow-2xl shadow-slate-400 z-auto">
+            <a name="contact"></a>
+            <form id="contactForm"
+                class="flex flex-col w-full md:w-96 lg:w-2/5 h-fit bg-slate-200 rounded-lg p-3 shadow-2xl shadow-slate-400 hover:translate-y-2 hover:cursor-pointer transition ease-in-out duration-500">
+                <h1 class=" text-purple-800 text-2xl md:text-3xl lg:text-4xl mb-5 font-bold">Contact With Me</h1>
+                <div class="flex flex-col">
+                    <h2 class="alert w-full mx-auto p-2 text-center bg-green-400 text-white hidden">your message has
+                        been sent</h2>
+                    <input type="text" id="name" placeholder="Enter your name" class="my-3 p-3 bg-green-100" required>
+                    <input type="email" id="email" placeholder="Enter your email" class="my-3 p-3 bg-green-100">
+                    <textarea name="" id="textarea" placeholder="Write Your Queries" cols="25" rows="10"
+                        class="my-3 p-3 bg-green-100" required></textarea>
+                    <button type="submit"
+                        class="text-white text-lg md:text-2xl shadow-lg shadow-purple-500 p-1 md:p-2 my-3 w-fit bg-purple-700 rounded hover:scale-90 transition ease-in-out duration-400">Submit
+                        Here</button>
+                </div>
+            </Form>
+        </div>
+        <h1 class="w-full mx-auto text-center mt-2 md:mt-5 p-1 md:p-2 text-sm md:text-lg">© 2024 AK Inc. All rights
+            reserved. AK Inc® is registered trademarks</h1>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
