@@ -26,11 +26,12 @@
             </button>
             <div
                 class="hidden md:flex gap-2 xl:gap-9 lg:gap-6 md:gap-4 md:px-3 place-items-center mx-auto bg-slate-300 md:text-xl text-md shadow-xl shadow-slate-400 md:rounded-full rounded lg:px-5 hover:px-6 transition-all duration-400 hover:shadow-2xl hover:shadow-slate-400">
-                <a href="#home" class="hover:translate-y-1 transition ease-in-out duration-400n text-green-500 hover:text-black">Home</a>
+                <a href="#home"
+                    class="hover:translate-y-1 transition ease-in-out duration-400n text-green-500 hover:text-black">Home</a>
                 <a href="#about-me"
                     class="hover:translate-y-1 transition ease-in-out duration-400 text-purple-700 hover:text-teal-500">About</a>
-                <a href="#portfolio"
-                    class="hover:translate-y-1 transition ease-in-out duration-400 text-purple-700 hover:text-teal-500">portfolio</a>
+                <a href="#Projects"
+                    class="hover:translate-y-1 transition ease-in-out duration-400 text-purple-700 hover:text-teal-500">Projects</a>
                 <a href="#contact"
                     class="hover:translate-y-1 transition ease-in-out duration-400 text-purple-700 hover:text-teal-500">Contact</a>
             </div>
@@ -53,7 +54,7 @@
                 </li>
                 <li
                     class="border-b border-inherit py-5 p-5 text-center hover:text-black hover:bg-green-100 transition ease-in-out duration-600">
-                    <a href="#portfolio" class="block text-2xl " @click="openMenu = !openMenu">Portfolio</a>
+                    <a href="#Projects" class="block text-2xl " @click="openMenu = !openMenu">Projects</a>
                 </li>
                 <li
                     class="border-b border-inherit py-5 p-5 text-center hover:text-black hover:bg-green-100 transition ease-in-out duration-600">
@@ -94,15 +95,18 @@
                 Me</h1>
             <div
                 class="flex flex-col bg-slate-100 rounded-xl w-10/12 md:1/2 lg:w-2/3 place-items-center text-left md:pb-5 pt-2 md:pt-9 px-2 md:px-16 lg:px-24 lg:py-12 text-purple-900 text-sm md:text-xl lg:text-2xl bg-white">
-                <p class="md:pb-9 leading-3 md:leading-8 ">&nbsp &nbsp &nbsp &nbsp &nbsp I am an aspiring Software Development
+                <p class="md:pb-9 leading-3 md:leading-8 ">&nbsp &nbsp &nbsp &nbsp &nbsp I am an aspiring Software
+                    Development
                     Engineer in Testing (SDET) with a passion for quality assurance and a strong desire to learn and
                     grow in the field of software testing and automation. Currently, I
                     am focused on building my skills in both software development and testing methodologies to
                     contribute effectively to high-quality software delivery.</br></br>
 
                     As I embark on my SDET journey, I am actively exploring automation tools such as Selenium, JMeter,
-                    JUnit, TestNG, Playwright alongside various programming languages like Java, javascript, C/C++. I am committed to
-                    understanding the full software development lifecycle and how testing plays a crucial role in delivering reliable
+                    JUnit, TestNG, Playwright alongside various programming languages like Java, javascript, C/C++. I am
+                    committed to
+                    understanding the full software development lifecycle and how testing plays a crucial role in
+                    delivering reliable
                     applications.</br></br>
                 </p>
                 <button
@@ -149,7 +153,7 @@
 
 
         <!--personal project -->
-        <a name="portfolio"></a>
+        <a name="Projects"></a>
         <div
             class="w-full mt-36 p-10 flex flex-col place-content-center mx-auto bg-slate-300 shadow-2xl shadow-slate-400 rounded-xl">
             <h1 class="text-center text-3xl md:text-5xl lg:text-6xl text-purple-800 font-bold p-3 md:p-5 m-3 md:m-5 ">
@@ -158,56 +162,94 @@
                 <div
                     class="flex flex-col w-full p-5 bg-slate-100 rounded-md hover:cursor-pointer hover:scale-95 transition-all hover:shadow-purple-600 shadow-2xl">
                     <div class="w-11/12 mx-auto pt-3 h-full">
-                        <a href="https://github.com/akashdas95/playwright_automation-dailyfinance.roadtocareer.net" target='_blank'><img src="./src/allure_report_playwright.JPG" alt="" class="w-full "></a>
+                        <a href="https://github.com/akashdas95/playwright_automation-dailyfinance.roadtocareer.net"
+                            target='_blank'><img src="./src/allure_report_playwright.JPG" alt="" class="w-full "></a>
                     </div>
                     <h1 class="pt-3 pl-3 text-purple-700 text-lg font-bold">PlayWright Automation Testing</h1>
-                    <p class="pl-3 text-purple-500 text-sm">Developed an automation testing framework using Playwright and the Page Object Model (POM) to improve
-test maintainability and efficiency for a web application.
-</p>
+                    <p class="pl-3 text-purple-500 text-sm">Developed an automation testing framework using Playwright
+                        and the Page Object Model (POM) to improve
+                        test maintainability and efficiency for a web application.
+                    </p>
                 </div>
                 <div
                     class="flex flex-col w-full p-5 bg-slate-100 rounded-md hover:cursor-pointer hover:scale-95 transition-all hover:shadow-purple-600 shadow-2xl">
                     <div class="w-11/12 mx-auto pt-3 h-full">
-                        <a href="https://github.com/akashdas95/TestNG_automation" target='_blank'><img src="./src/TestNG report.JPG" alt="" class="w-full "></a>
+                        <a href="https://github.com/akashdas95/TestNG_automation" target='_blank'><img
+                                src="./src/TestNG report.JPG" alt="" class="w-full "></a>
                     </div>
                     <h1 class="pt-3 pl-3 text-purple-700 text-lg font-bold">TestNG Automation Testing</h1>
-                    <p class="pl-3 text-purple-500 text-sm">Developed an automation testing framework using TestNG and the Page Object Model (POM) for efficient and
-maintainable web application testing.
-</p>
+                    <p class="pl-3 text-purple-500 text-sm">Developed an automation testing framework using TestNG and
+                        the Page Object Model (POM) for efficient and
+                        maintainable web application testing.
+                    </p>
                 </div>
                 <div
                     class="flex flex-col w-full p-5 bg-slate-100 rounded-md hover:cursor-pointer hover:scale-95 transition-all hover:shadow-purple-600 shadow-2xl">
                     <div class="w-11/12 mx-auto pt-3 h-full">
-                        <a href="https://github.com/akashdas95/postman_API_test" target='_blank'><img src="./src/newman Report.JPG" alt="" class="w-full "></a>
+                        <a href="https://github.com/akashdas95/postman_API_test" target='_blank'><img
+                                src="./src/newman Report.JPG" alt="" class="w-full "></a>
                     </div>
                     <h1 class="pt-3 pl-3 text-purple-700 text-lg font-bold">Postman API Testing</h1>
-                    <p class="pl-3 text-purple-500 text-sm">Developed an automated API testing suite using Postman for test case creation and Newman for command-line
-test execution, improving API reliability and integration testing.</p>
+                    <p class="pl-3 text-purple-500 text-sm">Developed an automated API testing suite using Postman for
+                        test case creation and Newman for command-line
+                        test execution, improving API reliability and integration testing.</p>
+                </div>
+                <div
+                    class="flex flex-col w-full p-5 bg-slate-100 rounded-md hover:cursor-pointer hover:scale-95 transition-all hover:shadow-purple-600 shadow-2xl">
+                    <div class="w-11/12 mx-auto pt-3 h-full">
+                        <a href="https://github.com/akashdas95/Unit-testing-of-demoqa.com"
+                            target='_blank'><img src="./src/Junit repo.JPG" alt="" class="w-full "></a>
+                    </div>
+                    <h1 class="pt-3 pl-3 text-purple-700 text-lg font-bold">Unit Testing automation with JUnit</h1>
+                    <p class="pl-3 text-purple-500 text-sm">Developed an automation testing framework using JUnit
+                        to improve test maintainability and efficiency for a web application.
+                    </p>
+                </div>
+                <div
+                    class="flex flex-col w-full p-5 bg-slate-100 rounded-md hover:cursor-pointer hover:scale-95 transition-all hover:shadow-purple-600 shadow-2xl">
+                    <div class="w-11/12 mx-auto pt-3 h-full ">
+                        <a href="https://github.com/akashdas95/Manual_testing_Dailyfinance.net"
+                            target='_blank'><img src="./src/manual testing report.JPG" alt="" class="w-full "></a>
+                    </div>
+                    <h1 class="pt-3 pl-3 text-purple-700 text-lg font-bold">Manual Testing</h1>
+                    <p class="pl-3 text-purple-500 text-sm">Developed a manual testing report for Dailyfinance.net with Test cases.
+                    </p>
+                </div>
+                <div
+                    class="flex flex-col w-full p-5 bg-slate-100 rounded-md hover:cursor-pointer hover:scale-95 transition-all hover:shadow-purple-600 shadow-2xl">
+                    <div class="w-11/12 mx-auto pt-3 h-full">
+                        <a href="https://github.com/akashdas95/Mocha-chai-API_Testing"
+                            target='_blank'><img src="./src/Mocha report.JPG" alt="" class="w-full "></a>
+                    </div>
+                    <h1 class="pt-3 pl-3 text-purple-700 text-lg font-bold">Mocha-Chai API Automation Testing</h1>
+                    <p class="pl-3 text-purple-500 text-sm">Developed an automation testing Suit using Mocha
+                        and Chai for assertion to improve test maintainability and efficiency for API Testing.
+                    </p>
                 </div>
             </div>
         </div>
 
         <!--social contact-->
 
-        <div class="relative">
+        <div class="relative ">
             <ul>
                 <li
-                    class= "w-6 md:w-10 fixed bottom-60 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
+                    class="w-6 md:w-10 fixed bottom-60 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
                     <a href="https://www.facebook.com/profile.php?id=100028346620432" target='_blank'>
                         <img src="./src/facebook.png" alt="facebook" class="rounded-full" /></a>
                 </li>
                 <li
-                    class= "w-6 md:w-10 fixed bottom-40 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
+                    class="w-6 md:w-10 fixed bottom-40 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
                     <a href="https://github.com/akashdas95" target='_blank'>
-                        <img src="./src/github.png"  alt="github" class="rounded-full"/></a>
+                        <img src="./src/github.png" alt="github" class="rounded-full" /></a>
                 </li>
                 <li
-                    class= "w-6 md:w-10 fixed bottom-20 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
+                    class="w-6 md:w-10 fixed bottom-20 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
                     <a href="https://www.linkedin.com/in/akash-das-a17893205/" target='_blank'>
-                        <img src="./src/linkedin.png" alt="linkedin" class="rounded-full"/></a>
+                        <img src="./src/linkedin.png" alt="linkedin" class="rounded-full" /></a>
                 </li>
                 <li
-                    class= "w-6 md:w-10 fixed bottom-0 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
+                    class="w-6 md:w-10 fixed bottom-0 right-1 hover:translate-y-1 transition ease-in-out duration-500 z-50">
                     <a href="https://leetcode.com/u/dasakind/" target='_blank'>
                         <img src="./src/leetcode.png" alt="leetcode" class="rounded-full" /></a>
                 </li>
